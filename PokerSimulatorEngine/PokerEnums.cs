@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace PokerSimulatorEngine
 {
     public class PokerEnums
@@ -18,9 +13,14 @@ namespace PokerSimulatorEngine
             Hearts, Diamonds, Spades, Clubs
         }
 
-        public enum PokerAction
+        public enum PlayerAction
         {
-            Fold, Call, Check, Raise, HandStarted, FlopStarted, TurnStarted, RiverStarted, WinnerDeclared, PlayerLeft, PlayerJoined
+            Fold, Bet
+        }
+
+        public enum GameAction
+        {
+            PlayerPlayed, HandStarted, FlopStarted, TurnStarted, RiverStarted, HandEnded, PlayerLeft, PlayerJoined, PlayerWon, PlayerPartialWon
         }
     }
 }

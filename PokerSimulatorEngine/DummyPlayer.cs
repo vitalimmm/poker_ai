@@ -1,14 +1,19 @@
 ﻿using PokerSimulatorEngine.Interfaces;
 using System.Collections.ObjectModel;
+using System;
 
 namespace PokerSimulatorEngine
 {
     public class DummyPlayer : IPokerPlayer
     {
-        public PokerEnums.PokerAction ComputeAction(ReadOnlyCollection<PokerEvent> events, Card[] hand, double currentStack, out double raiseAmount)
+        public PokerEnums.PlayerAction ComputeAction(Card[] hand, double currentStack, out double betAmount)
         {
-            raiseAmount = 0;
-            return PokerEnums.PokerAction.Call;
+            throw new NotImplementedException();
+        }
+
+        public void PokerGameActionHandler(PokerEventArgs pokerEvents)
+        {
+            throw new NotImplementedException();
         }
     }
 }
